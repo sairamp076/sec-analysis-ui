@@ -1,0 +1,185 @@
+/* Overall body and background styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eaeaea; /* Light gray background */
+}
+
+/* Title styling */
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* App container styling */
+.App {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px; /* Limit max width of the card */
+  text-align: center;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  margin-bottom: 20px;
+}
+
+/* Styling for dropdown */
+.dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.dropdown:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Styling for the selected CIK info */
+.selected-cik {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Styling for selected CIK label */
+.selected-cik strong {
+  color: #007bff;
+}
+
+/* Styling for the download button */
+.download-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button:disabled {
+  background-color: #ddd;
+}
+
+.download-button.success {
+  background-color: #007bff;
+}
+
+/* Styling for the analyze button */
+.analyze-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  margin-left : 20px;
+}
+.download-success-message {
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/* Styling for JSON container */
+.json-container {
+  margin-top: 30px;
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List layout for JSON data */
+.json-list {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Styling for each key-value row */
+.json-row {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.json-key {
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.json-key:hover {
+  text-decoration: underline;
+}
+
+.json-value {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Expandable row for nested objects */
+.json-value.expanded {
+  padding-left: 20px;
+  background-color: #eef1f5;
+  margin-top: 10px;
+}
+
+.expandable {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.json-key {
+  color: blue; /* Blue color for keys */
+  font-weight: bold;
+}
+
+.json-row {
+  display: flex;
+  margin: 5px 0;
+}
