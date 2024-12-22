@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/companies/")
+      .get("https://sec-scraper.vercel.app/api/companies/")
       .then((response) => setCompanies(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -35,7 +35,7 @@ function App() {
 
   const handleDownloadClick = () => {
     axios
-      .post(`http://127.0.0.1:8000/api/process-cid?cid=${selectedCik}`)
+      .post(`https://sec-scraper.vercel.app/api/process-cid?cid=${selectedCik}`)
       .then((response) => {
         if (response.status === 200) {
           console.log("Dataset downloaded successfully!");
@@ -60,7 +60,7 @@ function App() {
 
   const handleAnalyzeClick = () => {
     axios
-      .post(`http://127.0.0.1:8000/api/analyse-cid?cid=${selectedCik}`)
+      .post(`https://sec-scraper.vercel.app/api/analyse-cid?cid=${selectedCik}`)
       .then((response) => {
         setJsonData(response.data);
         // Check if the message key is null or data is invalid (rate limit exceeded)
